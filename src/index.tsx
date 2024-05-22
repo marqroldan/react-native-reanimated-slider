@@ -14,6 +14,7 @@ function Slider(props: Props) {
     hitSlop: _hitSlop,
     thumbWidth = 24,
     orientation = 'horizontal',
+    progress,
   } = props;
 
   const hitSlop = useMemo(() => {
@@ -50,8 +51,14 @@ function Slider(props: Props) {
       } else {
         thumbValue.value = clamp(y, 0, height.value);
       }
+
+      if (progress) {
+        progress.value =
+          thumbValue.value /
+          ((orientation === 'horizontal' ? width.value : height.value) || 1);
+      }
     },
-    [orientation, thumbValue, width.value, height.value]
+    [progress, orientation, thumbValue, width.value, height.value]
   );
 
   const onGestureEvent = useMemo(() => {

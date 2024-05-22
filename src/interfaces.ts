@@ -1,4 +1,5 @@
 import type { ViewStyle } from 'react-native';
+import type { SharedValue } from 'react-native-reanimated';
 
 export type Props = {
   hitSlop?: {
@@ -11,4 +12,5 @@ export type Props = {
   thumbWidth?: number;
   trackStyle?: ViewStyle;
   thumbStyle?: ViewStyle;
+  progress?: SharedValue<number>;
 };
