@@ -1,6 +1,6 @@
 {
   "name": "@marqroldan/react-native-reanimated-slider",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Slider component that supports vertical and horizontal utilizing Reanimated",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
