@@ -13,4 +13,5 @@ export type Props = {
   trackStyle?: ViewStyle;
   thumbStyle?: ViewStyle;
   progress?: SharedValue<number>;
+  onChangeLayout?: (dimensions: { width: number; height: number }) => void;
 };

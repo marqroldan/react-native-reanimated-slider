@@ -15,6 +15,7 @@ function Slider(props: Props) {
     thumbWidth = 24,
     orientation = 'horizontal',
     progress,
+    onChangeLayout,
   } = props;
 
   const hitSlop = useMemo(() => {
@@ -40,6 +41,11 @@ function Slider(props: Props) {
 
     width.value = layoutWidth;
     height.value = layoutHeight;
+
+    onChangeLayout?.({
+      width: layoutWidth,
+      height: layoutHeight,
+    });
   };
 
   const onActiveSlider = useCallback(
